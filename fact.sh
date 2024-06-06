@@ -1,27 +1,15 @@
-facto()
+factorial()
 {
-    # if [$n -le 1]]
-    # then
-    # return 1
-    # else
-    # return $($n*($n-1))
-    # fi
-    fact = $n
-
-    if((fact <= 2)); then
-    echo $fact
+    if [ $1 -le 1 ]
+    then
+    echo 1
     else
-    f=$((fact $f))
-    f=$((f*fact))
-    echo $f
+    echo $(( $1 * $(factorial $(($1-1)))))
     fi
 }
 echo enter a number
 read n
-if((n == 0)); then
-echo 1
-else
-facto $n
-fi
+factorial $n
+
 
 
